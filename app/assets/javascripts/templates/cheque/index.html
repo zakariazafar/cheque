@@ -1,0 +1,30 @@
+<div class="container">
+<header class="row">
+  <h1 class="text-center col-md-6 col-md-offset-3">List of Cheques</h1>
+</header>
+
+<hr>
+<section class="row" ng-if="cheques">
+ 
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="cheque in cheques">
+        <td><a ng-click="search(cheque.name)" >{{cheque.name}}</a></td>
+        <td>{{cheque.date}}</td>
+        <td>{{cheque.value}}</td>
+        <td><button class="btn btn-info">Print</button></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</section>
+</div>
