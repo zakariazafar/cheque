@@ -10,7 +10,7 @@
 <table class="table table-striped">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Name [<a ng-click="search('all')" >All</a>]</th>
         <th>Date</th>
         <th>Amount</th>
         <th></th>
@@ -18,7 +18,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="cheque in cheques">
-        <td><a ng-click="search(cheque.name)" >{{cheque.name}}</a></td>
+        <td><a href="#" ng-click="search(cheque.name)" >{{cheque.name}}</a></td>
         <td>{{cheque.date}}</td>
         <td>{{cheque.value}}</td>
         <td><button class="btn btn-info">Print</button></td>
