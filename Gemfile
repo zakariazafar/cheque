@@ -35,6 +35,24 @@ gem 'bower-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# HOME: https://github.com/ddollar/foreman
+# Manage Procfile-based applications
+gem "foreman"
+
+group :production, :staging do
+  # HOME: https://github.com/heroku/rails_12factor
+  # Makes running your Rails app easier. Based on the ideas behind 12factor.net
+  gem "rails_12factor"
+
+  # HOME: https://github.com/heroku/rails_stdout_logging
+  # Rails gem to configure your app to log to standard out.
+  gem "rails_stdout_logging"
+
+  # HOME: https://github.com/heroku/rails_serve_static_assets
+  # Rails gem to enable serving of static assets
+  gem "rails_serve_static_assets"
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
