@@ -83,6 +83,16 @@ group :development, :test do
   # A browser automation framework and ecosystem.
   gem 'selenium-webdriver'
 
+  # HOME: https://github.com/modeset/teaspoon
+  # Teaspoon: Javascript test runner for Rails. 
+  # Run tests in the browser or headless with 
+  # PhantomJS, Selenium WebDriver or Capybara Webkit.
+  gem 'teaspoon-jasmine'
+
+  # HOME: https://github.com/ariya/phantomjs/
+  # Scriptable Headless WebKit 
+  gem 'phantomjs'
+
 end
 
 group :development do
