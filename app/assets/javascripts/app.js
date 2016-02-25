@@ -8,7 +8,7 @@ cheque.config([
     
     return $routeProvider.when('/', {
       templateUrl: "cheque/index.html",
-      controller: 'ChequeController'
+      controller: 'ChequesController'
     });
   }
   

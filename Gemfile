@@ -44,6 +44,10 @@ gem 'angular-rails-templates'
 # Manage Procfile-based applications
 gem "foreman"
 
+# HOME: https://github.com/rails/sprockets-rails
+# Sprockets Rails integration
+gem 'sprockets-rails', '2.3.3'
+
 group :production, :staging do
   # HOME: https://github.com/heroku/rails_12factor
   # Makes running your Rails app easier. Based on the ideas behind 12factor.net
