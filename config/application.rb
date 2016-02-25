@@ -32,5 +32,7 @@ module Empireone
       end
     }
 
+   config.autoload_paths << Rails.root.join('app', 'services')
+
   end
 end
