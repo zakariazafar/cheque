@@ -10,31 +10,31 @@ controllers.controller("ChequeController", [
     id: 1,
     name: "Test Name1",
     date: "2016-02-10",
-    value: 123456
+    amount: 123456
   },
   {
     id: 2,
     name: "Test Name2",
     date: "2016-02-11",
-    value: 560
+    amount: 560
   },
   {
     id: 3,
     name: "Test Name3",
     date: "2016-02-12",
-    value: 1245
+    amount: 1245
   },
   {
     id: 4,
     name: "Test Name4",
      date: "2016-02-13",
-    value: 678
+    amount: 678
   },
   {
     id: 4,
     name: "Test Name2",
      date: "2016-02-15",
-    value: 900
+    amount: 900
   }
 ];
 
