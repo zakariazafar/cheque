@@ -3,7 +3,7 @@ var controllers;
 controllers = angular.module('controllers',[]);
 
 controllers.controller("ChequeController", [
-  '$scope','$routeParams','$location', function($scope,$routeParams,$location) {
+  '$scope','$routeParams','$location','$resource', function($scope,$routeParams,$location,$resource) {
     
 		cheques =  [
   {
