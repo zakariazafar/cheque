@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :cheques, only: [:index], defaults: {format: :json}
+  resources :cheques, only: [:index,:show,:create], defaults: {format: :json}
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

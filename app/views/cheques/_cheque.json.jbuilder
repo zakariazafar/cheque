@@ -1,1 +1,1 @@
-json.(cheque, :id, :name, :date, :amount)
+json.(cheque, :id, :name, :date, :amount_formatted,:number_in_words)

@@ -98,6 +98,8 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    numbers_in_words (0.4.0)
+      activesupport
     pg (0.18.4)
     phantomjs (2.1.1.0)
     rack (1.6.4)
@@ -209,6 +211,7 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.0)
   jquery-rails
+  numbers_in_words
   pg
   phantomjs
   rails (= 4.2.4)

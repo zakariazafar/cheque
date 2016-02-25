@@ -48,6 +48,10 @@ gem "foreman"
 # Sprockets Rails integration
 gem 'sprockets-rails', '2.3.3'
 
+# HOME: https://github.com/markburns/numbers_in_words
+# A ruby gem to convert numbers into English words and vice versa.
+gem 'numbers_in_words'
+
 group :production, :staging do
   # HOME: https://github.com/heroku/rails_12factor
   # Makes running your Rails app easier. Based on the ideas behind 12factor.net

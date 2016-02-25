@@ -1,0 +1,36 @@
+<div class="container">
+
+<header class="row">
+  <h1 class="text-center col-md-6 col-md-offset-3">Print Cheque</h1>
+</header>
+<hr />
+<div class="form-group ">
+     
+       <button ng-click="back()" class="btn btn-info btn-small">Back</button>
+</div>
+<section class="row" ng-if="cheque">
+ 
+
+<table class="table table-striped">
+    
+    <tbody>
+      <tr >
+        <td><b>Date</b> : {{cheque.date}}</td>
+      </tr>
+      <tr >
+        <td><b>Name</b> : {{cheque.name}}</td>
+      </tr>
+      <tr >
+        <td><b>Amount</b> : AUD {{cheque.amount_formatted}}</td>
+      </tr>
+       <tr >
+        <td><b>In Words</b> : {{cheque.number_in_words}}</td>
+      </tr> 
+       
+      </tr>
+      
+    </tbody>
+  </table>
+</section>
+
+</div>

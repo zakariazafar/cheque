@@ -1,0 +1,1 @@
+json.partial! 'cheque', cheque: @cheque
