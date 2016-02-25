@@ -18,7 +18,7 @@
     </thead>
     <tbody>
       <tr ng-repeat="cheque in cheques">
-        <td><a href="#" ng-click="search(cheque.name)" >{{cheque.name}}</a></td>
+        <td><a ng-click="search(cheque.name)" >{{cheque.name}}</a></td>
         <td>{{cheque.date}}</td>
         <td>{{cheque.value}}</td>
         <td><button class="btn btn-info">Print</button></td>
