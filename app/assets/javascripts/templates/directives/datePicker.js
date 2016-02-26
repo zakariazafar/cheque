@@ -5,9 +5,8 @@ cheque
   .directive('datePicker', function() {
 
 
-    var controller = function ($scope) {
-          
-        $scope.dateOptions = {
+function datePickerController($scope) {
+   $scope.dateOptions = {
           formatYear: 'yy',
           startingDay: 1
         };
@@ -21,11 +20,16 @@ cheque
         };      
 
          $scope.format = 'yyyy-MM-dd';
-     };  
+}
+datePickerController.$inject = ['$scope'];
+
+
+
+    
     return {
       replace: false,
       restrict: 'E',
-      controller: controller,
+      controller: datePickerController,
       scope: {        
         date: '=ngModel'
       },
