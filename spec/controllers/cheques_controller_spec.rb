@@ -14,9 +14,29 @@ describe ChequesController do
 	  end
  	subject(:results) { JSON.parse(response.body) }
 
-    def extract_name
-      ->(object) { object["name"] }
-    end
+    it { expect(response.status).to eq(200) }
+    it { expect(results.length).to eq(5) }
+  end
+
+  describe "show" do
+  	before do
+  		xhr :get, :show, format: :json, id: cheque_id
+  	end
+  	subject(:results) { JSON.parse(response.body) }
+
+  	context "when the cheque exists" do
+  		let(:cheque){
+  			Cheque.create!(name: 'Test Name1',date: '2016-02-10',amount: 123456)
+  		}
+  		let(:cheque_id) { cheque.id }
+
+  		it { expect(response.status).to eq(200) }
+  		it { expect(results["id"]).to eq(cheque.id) }
+  		it { expect(results["name"]).to eq(cheque.name) }
+  		it { expect(results["date"]).to eq(DateTimeUtil.format_date(cheque.date)) }
+  		it { expect(results["number_in_words"]).to eq(NumberUtil.number_in_words(cheque.amount.to_f)) }
+  	end
+  	
   end
 
 end
