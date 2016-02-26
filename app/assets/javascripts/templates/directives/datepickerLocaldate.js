@@ -4,7 +4,10 @@ var cheque;
         var directive = {
             restrict: 'A',
             require: ['ngModel'],
-            link: link
+            link: link,
+            scope: {        
+        date: '=ngModel'
+      }
         };
         return directive;
 
