@@ -94,6 +94,7 @@ Templates are provided from templates directory.
 
 Date Picker used as a directive in the create view.
 
+ChequeService has been defined in service.js file.
 
 ##Tests:##
 
