@@ -8,6 +8,6 @@ class NumberUtil
 	def self.number_in_words(number)
 		# Gem used from https://github.com/markburns/numbers_in_words
 		
-		NumbersInWords.in_words(number.to_f)
+		NumbersInWords.in_words(number.to_f).capitalize
 	end
 end
