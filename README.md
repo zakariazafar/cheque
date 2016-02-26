@@ -6,7 +6,6 @@ User Stories
 1.3 – Filtering the list is possible by clicking on a recipient name, which results in showing the list of cheque as 1.2, but for a selected recipient only.
 1.4 – Viewing a cheque allows for the operator to view the cheque as saved and generated out the system, including (but not limited to!) the numeric to string representation conversion.
 
-
 The technologies Used:
 Web API:
 Ruby 2.2.3
@@ -27,6 +26,17 @@ Deployment:
 Heroku (for deployment)
 Version Control:
 Git
+
+
+Deployed at 
+https://printcheque.herokuapp.com
+
+Installation:
+Make sure your postgresql server is running.
+Update the username and password field at app/config/database.yml file
+execute rake db:create 
+execute rake db:migrate
+execute rails s
 
 Application Structure:
 
