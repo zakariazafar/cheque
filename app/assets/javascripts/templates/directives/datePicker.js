@@ -7,27 +7,23 @@ cheque
 
     var controller = function ($scope) {
           
-      $scope.dateOptions = {
-        formatYear: 'yy',
-        startingDay: 1
-      };
+        $scope.dateOptions = {
+          formatYear: 'yy',
+          startingDay: 1
+        };
 
-     $scope.popup = {
-        opened: false
-      };
-      
-      $scope.openCalendar = function() {        
-        $scope.popup.opened = true;
-      };      
-  };    
+       $scope.popup = {
+          opened: false
+        };
+        
+        $scope.openCalendar = function() {        
+          $scope.popup.opened = true;
+        };      
 
-
-
-
-
-
+         $scope.format = 'yyyy-MM-dd';
+     };  
     return {
-      replace: true,
+      replace: false,
       restrict: 'E',
       controller: controller,
       scope: {        
