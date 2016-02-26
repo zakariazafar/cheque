@@ -94,6 +94,7 @@ Templates are provided from templates directory.
 
 Date Picker used as a directive in the create view.
 
+ChequeService has been defined in service.js file.
 
 ##Tests:##
 
@@ -103,5 +104,5 @@ All tests are in spec directory at root.
 - javascripts   →  Tests for frontend
    - controllers
 
-- Executing frontend test       rake teaspoon
-- Executing backend test     rspec
+- Executing frontend test       **rake teaspoon**
+- Executing backend test     **rspec**
