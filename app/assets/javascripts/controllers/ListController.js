@@ -1,8 +1,8 @@
 cheque.controller("ListController", [
-  '$scope','$routeParams', '$location','$resource','Cheque','flash', function($scope,$routeParams, $location,$resource,Cheque,flash) {
+  '$scope','$routeParams', '$location','$resource','ChequeService','flash', function($scope,$routeParams, $location,$resource,ChequeService,flash) {
     
     
-    cheques = Cheque.query({
+    cheques = ChequeService.query({
       keywords: 'all'
     },function(results){
       $scope.cheques = results;

@@ -6,13 +6,13 @@ describe("PrintController", function() {
   routeParams = null;
   resource = null;
   httpBackend = null;
-  ChequeService = null;
+  chequeService = null;
 
   fakeCheque = {"id":1,"name":"test","date":"2016-02-12","amount_formatted":"2,345.0","number_in_words":"two thousand three hundred and forty five point zero"};
 
   setupController = function(keywords, results) {  	
 
-    return inject(function($location, $routeParams, $rootScope, $resource, $httpBackend, $controller, Cheque) {
+    return inject(function($location, $routeParams, $rootScope, $resource, $httpBackend, $controller, ChequeService) {
       scope = $rootScope.$new();
       location = $location;
       resource = $resource;
@@ -22,7 +22,7 @@ describe("PrintController", function() {
 
       routeParams.keywords = keywords;
       httpBackend = $httpBackend;
-      ChequeService = Cheque;
+      chequeService = ChequeService;
       return ctrl = $controller('PrintController', {
         $scope: scope,
         $location: location

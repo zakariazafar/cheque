@@ -1,11 +1,11 @@
 cheque
 .controller("PrintController", [
-  '$scope','$routeParams', '$location','$resource','Cheque','flash', function($scope,$routeParams, $location,$resource,Cheque,flash) {
+  '$scope','$routeParams', '$location','$resource','ChequeService','flash', function($scope,$routeParams, $location,$resource,ChequeService,flash) {
     
      
     if ($routeParams.chequeId) {
       
-      Cheque.get({
+      ChequeService.get({
        chequeId: $routeParams.chequeId
       }, (function(cheque) {
        

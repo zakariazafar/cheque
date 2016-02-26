@@ -1,5 +1,5 @@
 cheque.controller("CreateController", [
-  '$scope','$routeParams', '$location','$resource','Cheque','flash', function($scope,$routeParams, $location,$resource,Cheque,flash) {
+  '$scope','$routeParams', '$location','$resource','ChequeService','flash', function($scope,$routeParams, $location,$resource,ChequeService,flash) {
   
    $scope.cancel = function(){
    return $location.path("/");
@@ -14,7 +14,7 @@ cheque.controller("CreateController", [
         return flash.error = "Something went wrong";
       };
       
-      Cheque.create($scope.cheque, (function(newCheque) {
+      ChequeService.create($scope.cheque, (function(newCheque) {
         return $location.path("/cheques/"+newCheque.id);
       }), onError);
       
