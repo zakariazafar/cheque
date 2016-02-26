@@ -104,5 +104,5 @@ All tests are in spec directory at root.
 - javascripts   →  Tests for frontend
    - controllers
 
-- Executing frontend test       rake teaspoon
-- Executing backend test     rspec
+- Executing frontend test       **rake teaspoon**
+- Executing backend test     **rspec**
