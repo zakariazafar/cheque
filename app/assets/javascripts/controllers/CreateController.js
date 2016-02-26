@@ -5,8 +5,8 @@ cheque.controller("CreateController", [
    return $location.path("/");
    }
 
+   $scope.cheque = {};
   
-
    $scope.save = function() {
       var onError;      
 
@@ -14,13 +14,11 @@ cheque.controller("CreateController", [
         return flash.error = "Something went wrong";
       };
       
-        Cheque.create($scope.cheque, (function(newCheque) {
-          return $location.path("/cheques/"+newCheque.id);
-        }), onError);
+      Cheque.create($scope.cheque, (function(newCheque) {
+        return $location.path("/cheques/"+newCheque.id);
+      }), onError);
       
     };
-   
-
-   
+  
   }
 ]);
