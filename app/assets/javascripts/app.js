@@ -1,6 +1,6 @@
 var controllers, cheque;
 
-cheque = angular.module('cheque', ['templates', 'ngRoute', 'controllers','ngResource', 'angular-flash.service', 'angular-flash.flash-alert-directive','ngAnimate']);
+cheque = angular.module('cheque', ['templates', 'ngRoute','ngResource', 'angular-flash.service', 'angular-flash.flash-alert-directive','ngAnimate', 'ui.bootstrap', 'smart-table']);
 
 cheque.config([
   '$routeProvider', 'flashProvider', function($routeProvider, flashProvider) {
@@ -12,13 +12,13 @@ cheque.config([
     
     return $routeProvider.when('/', {
       templateUrl: "cheque/index.html",
-      controller: 'ChequesController'
+      controller: 'ListController'
     }).when('/cheques/new', {
       templateUrl: "cheque/new.html",
-      controller: 'ChequesController'
+      controller: 'CreateController'
     }).when('/cheques/:chequeId', {
       templateUrl: "cheque/show.html",
-      controller: 'ChequesController'
+      controller: 'PrintController'
     });
   }
 

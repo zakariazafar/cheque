@@ -9,7 +9,7 @@
     {{flash.message}}
   </article>
 </aside>
-<form class="form-horizontal" role="form" class="new-form">
+<form name="frmNewCheque" class="form-horizontal" role="form" class="new-form" novalidate>
   <div class="form-group" ng-class="{'has-warning has-feedback':errors.name}">
     <label 
       for="name" 
@@ -21,25 +21,34 @@
     </div>
   </div>
 
-  <div class="form-group" ng-class="{'has-warning has-feedback':errors.date}">
+  <div class="form-group" ng-class="{'has-error': frmNewCheque.date.$dirty && frmNewCheque.date.$invalid}">
     <label 
       for="date" 
       class="col-md-2 control-label col-md-offset-2">
       Date
     </label>
-    <div class="col-md-5">
-      <input type="text"  class="form-control"  ng-model="cheque.date" placeholder="yyyy-mm-dd" required>
+    <div class="col-md-5">      
+        <date-picker ng-model="cheque.date" ></date-picker>
+
+      <div class="help-block" ng-if="frmNewCheque.date.$dirty && frmNewCheque.date.$invalid">
+        Invalid date
+      </div>
+
     </div>
   </div>
-
-  <div class="form-group" ng-class="{'has-warning has-feedback':errors.amount}">
+  <div class="form-group" ng-class="{'has-error': frmNewCheque.amount.$dirty && frmNewCheque.amount.$invalid}">
     <label 
       for="amount" 
       class="col-md-2 control-label col-md-offset-2">
       Amount
     </label>
     <div class="col-md-5">
-      <input type="text"  class="form-control"  ng-model="cheque.amount" required>
+      <input type="number" name="amount" class="form-control"  ng-model="cheque.amount" required data-min="1" >
+
+      <div class="help-block" ng-if="frmNewCheque.amount.$dirty && frmNewCheque.amount.$invalid">
+        Invalid amount
+      </div>
+
     </div>
   </div>
 
@@ -49,7 +58,7 @@
       <button class="btn btn-default" ng-click="cancel()"> Cancel</button>
     </div>
     <div class="col-md-4 text-right">
-      <button class="btn btn-primary" ng-click="save()"> Save </button>
+      <button type="submit" class="btn btn-primary" ng-click="save()" ng-disabled="frmNewCheque.$invalid"> Save </button>
     </div>
   </div>
 </section>

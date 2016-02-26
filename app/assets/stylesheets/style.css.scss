@@ -1,0 +1,27 @@
+.st-sort-ascent:before{
+content: '\25B2';
+}
+
+.st-sort-descent:before{
+content: '\25BC';
+}
+
+.name-col {
+	width: 30%;  	
+}
+
+.date-col {
+	width: 25%;
+}
+
+.amount-col {
+	width: 25%;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.pagination {
+	cursor: pointer;	
+}

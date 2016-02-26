@@ -18,4 +18,6 @@
 //= require angular-rails-templates
 //= require angular-flash/dist/angular-flash
 //= require angular-animate/angular-animate.min.js
+//= require angular-bootstrap/ui-bootstrap-tpls.js
+//= require angular-smart-table/dist/smart-table.js
 //= require_tree .

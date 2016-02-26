@@ -7,6 +7,8 @@
     "bootstrap-sass-official": "latest",
     "angular-route": "latest",
     "angular-flash": "latest",
-    "angular-animate": "latest"
+    "angular-animate": "latest",
+    "angular-bootstrap": "latest",
+    "angular-smart-table": "latest"
   }
 }
